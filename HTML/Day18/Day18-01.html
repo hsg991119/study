@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="../reset.css">
+
+        <style>
+
+            #container {
+                padding: 100px;
+            }
+
+            #container::after { content: ""; display: block; clear: both;}
+
+            #container > div {
+                float: left;
+                width: 200px;
+                height: 200px;
+                margin: 50px;
+                border: 10px solid crimson;
+            }
+
+            #container > div > div {
+                font-size: 2em;
+                font-weight: bold;
+                text-align: center;
+                line-height: 200px;
+                background-color: #808000;
+                color: black;
+            }
+
+            
+            /* 
+            #container > div:nth-child(1) > div { transform: rotate(60deg); }
+            #container > div:nth-child(2) > div { transform: scale(0.8); }
+            #container > div:nth-child(3) > div { transform: translate(100px, 100px); }
+            #container > div:nth-child(4) > div { transform: skew(30deg); }
+             */
+
+            /* 
+            #container > div > div { transition-duration: 400ms; }
+            #container > div > div { overflow: hidden; }
+
+            #container > div:nth-child(1):hover > div { transform: rotate(60deg); }
+            #container > div:nth-child(2):hover > div { transform: scale(1.2); }
+            #container > div:nth-child(3):hover > div { transform: translate(100px, 100px); }
+            #container > div:nth-child(4):hover > div { transform: skew(30deg); } 
+            */
+
+            /* 
+            #container > div:nth-child(1) > div { transform: rotate(60deg); }
+
+            #container > div:nth-child(3) > div { transform: rotate(60deg) translateX(100px);}
+
+            #container > div:nth-child(4) > div { transform: translateX(100px) rotate(60deg);}
+             */
+
+             #container > div > div { transition-duration: 400ms; }
+             #container > div:hover > div { transform: rotate(60deg); }
+
+             #container > div:nth-child(1) > div { transform-origin: left top; }
+             #container > div:nth-child(2) > div { transform-origin: right top; }
+             #container > div:nth-child(3) > div { transform-origin: left bottom; }
+             #container > div:nth-child(4) > div { transform-origin: right bottom; }
+
+        </style>
+    </head>
+
+    <body>
+         <div id="container">
+            <div><div>BOX</div></div>
+            <div><div>BOX</div></div>
+            <div><div>BOX</div></div>
+            <div><div>BOX</div></div>
+         </div>
+    </body>
+
+    </html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="../reset.css">
+
+        <style>
+            #news {
+                width: 640px;
+                padding: 20px 0;
+                border: 3px solid black;
+                border-style: solid none;
+
+                margin: 50px auto;
+            }
+
+            #news > h2 {
+                font-size: 1.6em;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            #news > div {
+                height: 360px;
+                overflow: hidden;
+            }
+
+            /* #news > div::after { content: ""; display: block; clear: both;} */
+
+            #news > div > div,
+            #news > div > ul {
+                float: left;
+                width: 200px;
+            }
+
+            #news > div > div {
+                margin-right: 20px;
+
+                position: relative;
+            }
+
+            #news > div > div::after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                bottom: 10px;
+                right: -10px;
+                width: 1px;
+                border-right: 1px solid #999;
+            }
+
+            #news > div > div > a {
+                display: block;
+                margin-bottom: 6px;
+            }
+
+            /* 기사 썸네일 이미지 */
+            #news > div > div > a > img {
+                display: block;
+                width: 200px;
+                height: 120px;
+            }
+
+            /* 기사 섹션 */
+            #news h3 {
+                font-size: 0.8em;
+                margin-bottom: 6px;
+            }
+
+            #news h3 > a {
+                text-decoration: none;
+                color: #555;
+            }
+
+            /* 기사 제목 */
+            #news h4 { 
+                font-size: 1.2em;
+                font-weight: bold;
+                line-height: 1.2;
+                margin-bottom: 6px;
+            }
+
+            #news h4 > a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            /* 기사 요약 */
+            #news > div > div > p {
+                line-height: 1.25;
+            }
+
+            /* 섹션 헤드라인 기사 */
+            #news > div > ul > li {
+                height: 120px;
+                padding-top: 8px;
+                box-sizing: border-box;
+            }
+
+            #news > div > ul > li:not(:last-child) { 
+                border-bottom: 1px solid #999;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="news">
+            <h2>News</h2>
+
+            <div>
+                <div>
+                    <a href="#article-1">
+                        <img src="https://i.imgur.com/KsZbkTc.png" alt="News Thumbnail">
+                    </a>
+
+                    <h3><a href="section-international">International</a></h3>
+                    <h4><a href="#article-1">Lorem upsum dolor sit amet</a></h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt euismod consequat. Vivamus id nibh vel nulla 
+                            condimentum ultricies. Nunc laoreet, felis id posuere ullamcorper, est tortor semper lorem, ut pharetra magna risus vitae lorem. 
+                            Praesent at commodo est. Aenean fringilla lacus malesuada venenatis tempus. Pellentesque ac mauris luctus, varius orci vitae, 
+                            porttitor urna. Suspendisse velit arcu, tincidunt a ante eu, efficitur maximus arcu. Donec ultrices tempus lacus, eu fermentum sem. 
+                            Etiam ultricies erat id diam efficitur scelerisque. Aliquam et volutpat risus. Phasellus nec suscipit justo. Duis porttitor velit libero, 
+                            quis feugiat lacus lobortis at. Phasellus ut ante a arcu ultricies rhoncus a sed arcu.
+                    </p>
+                </div>
+                
+                <div>
+                    <a href="#article-2">
+                        <img src="https://i.imgur.com/KsZbkTc.png" alt="News Thumbnail">
+                    </a>
+
+                    <h3><a href="section-society">Society</a></h3>
+                    <h4><a href="#article-2">Lorem upsum dolor sit amet</a></h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt euismod consequat. Vivamus id nibh vel nulla 
+                            condimentum ultricies. Nunc laoreet, felis id posuere ullamcorper, est tortor semper lorem, ut pharetra magna risus vitae lorem. 
+                            Praesent at commodo est. Aenean fringilla lacus malesuada venenatis tempus. Pellentesque ac mauris luctus, varius orci vitae, 
+                            porttitor urna. Suspendisse velit arcu, tincidunt a ante eu, efficitur maximus arcu. Donec ultrices tempus lacus, eu fermentum sem. 
+                            Etiam ultricies erat id diam efficitur scelerisque. Aliquam et volutpat risus. Phasellus nec suscipit justo. Duis porttitor velit libero, 
+                            quis feugiat lacus lobortis at. Phasellus ut ante a arcu ultricies rhoncus a sed arcu.
+                    </p>
+                </div>
+                
+                <ul>
+                    <li>
+                        <h3><a href="#section-politics">Politics</a></h3>
+                        <h4><a href="#article-3">Pellen tesque habi tant morbi tris</a></h4>
+                    </li>
+
+                    <li>
+                        <h3><a href="#section-politics">Politics</a></h3>
+                        <h4><a href="#article-4">Pellen tesque habi tant morbi tris</a></h4>
+                    </li>
+
+                    <li>
+                        <h3><a href="#section-politics">Politics</a></h3>
+                        <h4><a href="#article-5">Pellen tesque habi tant morbi tris</a></h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>

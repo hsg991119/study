@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>float_study</title>
+        <style>
+            #container {
+                border: 2px solid #333;
+                margin: 50px auto;
+                padding: 10px;
+                width: 440px;
+            }
+
+            #container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            #container > div {
+                width: 200px;
+                line-height: 200px;
+                text-align: center;
+                float: left;
+                
+                margin: 10px;
+            }
+
+            #container > div:nth-child(1) {
+                background-color: pink;
+            }
+
+            #container > div:nth-child(2) {
+                background-color: yellowgreen;
+            }
+
+            #container > div:nth-child(3) {
+                background-color: cyan;
+                
+            }
+
+            #container > div:nth-child(4) {
+                background-color: gold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div>Pink</div>
+            <div>Yellowegreen</div>
+            <div>Cyan</div>
+            <div>Gold</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <title>animation</title>
+        <link rel="stylesheet" href="../reset.css">
+
+        <style>
+            #container {
+                border: 10px solid goldenrod;
+                height: 400px;
+                position: relative;
+            }
+
+            #container > div {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: deeppink;
+
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+
+                animation-iteration-count: infinite;
+
+                animation-direction: alternate;
+            }
+
+            #container > div:hover {
+                animation-play-state: paused;
+            }
+
+
+            /* @keyframes move {
+                from { top: 10px; left: 10px; }
+                33%  { top: 340px; left: 350px; }
+                66%  { top: 10px; left: 740px; }
+                to   { top: 340px; left: 1150px; }
+            } */
+
+            @keyframes move {
+                from { top: 0px; left: 0px; }
+                33%  { top: calc(100% - 50px); left: calc((100% - 50px) / 3); }
+                66%  { top: 0px; left: calc((100% - 50px) / 3 * 2); }
+                to   { top: calc(100% - 50px); left: calc(100% - 50px); }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="container">
+            <div></div>
+        </div>
+        
+    </body>
+</html>

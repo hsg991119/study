@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <title>transition</title>
+        <link rel="stylesheet" href="../reset.css">
+
+        <style>
+            #container {
+                font-size: 2em;
+                font-weight: bold;
+                text-align: center;
+                line-height: 2.4;
+                text-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+
+            }
+
+            #header { background-color: #422;}
+            #nav { background-color: #242;}
+            #sidebar { background-color: #224;}
+            #content { background-color: #442;}
+            #footer { background-color: #244;}
+
+            #sidebar, #content { line-height: 500px;}
+
+            /* @media screen and (max-width: 767px) {
+               
+            } */
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+                #wrap { overflow: hidden;}
+
+                #sidebar {
+                    float: left;
+                    width: 200px;
+                }
+
+                #wrapContent {
+                    float: left;
+                    width: 100%;
+                    margin-right: -200px;
+                }
+
+                #content {
+                    margin-right: 200px;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+               #container {
+                width: 1024px;
+                margin: 0 auto;
+               }
+
+               #wrap:after { content: ""; display: block; clear: both;}
+
+               #sidebar {
+                float: left;
+                width: 200px;
+               }
+
+               #wrapContent {
+                float: left;
+                width: 824px;
+               }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <header id="header">Hader</header>
+
+            <nav id="nav">Navigation</nav>
+
+            <div id="wrap">
+                <aside id="sidebar">Sidebar</aside>
+
+                <div id="wrapContent">
+                    <article id="content">Content</article>
+                </div>
+            </div>
+
+            <footer id="footer">Footer</footer>
+        </div>
+    </body>
+</html>

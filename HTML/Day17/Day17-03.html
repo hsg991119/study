@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <title>animation</title>
+        <link rel="stylesheet" href="../reset.css">
+
+        <style>
+            #box {
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+
+            #box > div {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                width: 200px;
+                height: 100px;
+                border-radius: 10px;
+                
+
+                line-height: 100px;
+                font-size: 2em;
+                font-weight: bold;
+                text-align: center;
+                color: midnightblue;
+
+                animation-name: move;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+
+                animation-iteration-count: infinite;
+
+                animation-direction: alternate;
+            }
+
+            #box > div:hover {
+                animation-play-state: paused;
+            }
+
+
+            @keyframes move {
+                from { top: 0; left: 0; background-color: gold;}
+                25%  { top: 0; left: 1405px; background-color: yellowgreen;}
+                50%  { top: 100px; left: 0; background-color: hotpink;}
+                75%  { top: 0; left: 0; background-color: yellowgreen;}
+                to   { top: 0; left: 0; background-color: gold;}
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="box">
+            <div>CSS3</div>
+        </div>
+
+    </body>
+</html>

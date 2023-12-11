@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>float_study</title>
+        <style>
+            #container {
+                border: 2px solid #333;
+                margin: 50px auto;
+                width: 440px;
+                padding: 10px;
+            }
+
+            #container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            #container > div {
+                box-sizing: border-box;
+                width: 200px;
+                text-align: center;
+                margin: 10px;
+                line-height: 220px;
+                float: left;
+            }
+
+            #container > div:first-child > div {
+                line-height: 100px;
+            }
+
+            #container > div:first-child > div:first-child {
+                background-color: pink;
+                margin-bottom: 20px;
+            }
+
+            #container > div:first-child > div:last-child{
+                background-color: yellowgreen;
+                
+            }
+
+            #container > div:last-child{
+                background-color: gold;
+            }
+
+
+            
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div>
+                <div>Pink</div>
+                <div>Yellowegreen</div>
+            </div>
+            <div>Gold</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta name="viewport" content="width=">
+        <meta charset="UTF-8">
+        <title>Study</title>
+        <link rel="stylesheet" href="../reset.css">
+
+        <style>
+            body.dark {
+                font-size: 2em;
+                font-weight: bold;
+                text-align: center;
+                line-height: 2.4;
+                text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+            }
+
+            #header { background-color: #422; }
+            #nav { background-color: #242; }
+            #sidebar { background-color: #224; }
+            #content { background-color: #442; }
+            #footer { background-color: #244; }
+
+            #sidebar, #content { line-height: 500px;}
+
+            #container::after { content: ""; display: block; clear: both; }
+
+            #sidebar {
+                float: left;
+                width: 200px;
+            }
+
+            #wrap {
+                float: left;
+                width: 100%;
+                margin-right: -200px;
+            }
+
+            #content {
+                margin-right: 200px;
+            }
+
+            #container {
+                overflow: hidden;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header id="header">Hader</header>
+
+        <nav id="nav">Navigation</nav>
+
+        <div id="container">
+            <aside id="sidebar">Sidebar</aside>
+
+            <div id="wrap">
+                <article id="content">Content</article>
+            </div>
+        </div>
+
+        <footer id="footer">Footer</footer>
+    </body>
+</html>

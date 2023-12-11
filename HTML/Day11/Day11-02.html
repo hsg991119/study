@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            #container {
+                background-color: #efe;
+                border: 3px solid green;
+                height: 400px;
+                position: relative;
+            }
+            
+            #container > div {
+                background-color: #fee;
+                border: 3px solid red;
+                box-sizing: border-box;
+                width: 200px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+                position: absolute;
+            }
+
+            #container > div:nth-child(1) {
+                left: 10px; top: 10px;
+            }
+
+            #container > div:nth-child(2) {
+                right: 10px; top: 10px;
+            }
+
+            #container > div:nth-child(3) {
+                left: 50%; top: 50%;
+                margin-left: -100px;
+                margin-top: -50px;
+            }
+
+            #container > div:nth-child(4) {
+                left: 10px; bottom: 10px;
+            }
+
+            #container > div:nth-child(5) {
+                right: 10px; bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+        </div>
+    </body>
+</html>

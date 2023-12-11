@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>css.selector demo</title>
+
+        <style>
+            #score > tbody > tr:nth-child(odd) { background-color: darkgray;}
+
+            #title::before{
+                content: "대한민국";
+                color: red;
+            }
+
+            #title::after{
+                content: "표";
+                color: red;
+            }
+
+            #title::selection{
+                background-color: black;
+                color: gold;
+            }
+
+            :link {color: red;}
+            :visited { color: green;}
+
+            /* #links > li:nth-child(1),
+            #links > li:nth-child(2) { background-color: yellowgreen;} */
+
+            /* #links > li:last-child { background-color: yellowgreen;} */
+
+            /* #links > li:not(:last-child) { background-color: yellowgreen;} */
+
+        </style>
+    </head>
+
+    <body>
+        <h1 id="title">
+            <!-- ::before -->
+            천하대학교 웹학과 성적
+            <!-- ::after -->
+        </h1>
+
+        <ul id="links">
+            <li><a href="http://www.gogle.com">Gogle</a></li>
+            <li><a href="http://www.naver.com">Naver</a></li>
+            <li><a href="http://www.facebook.com">Facebook</a></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <title>Mobile Web</title>
+        <link rel="stylesheet" href="../reset.css">
+
+        <style>
+            #header {
+                background-color: maroon;
+
+                position: relative;
+            }
+
+            #header h1 {
+                font-size: 2.4em;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                line-height: 60px;;
+            }
+
+            #toggle {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                margin-top: -12px;
+
+                width: 24px;
+                height: 24px;;
+                background: url("https://i.imgur.com/jDkAKiY.png")no-repeat;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+            }
+
+            #toggle >span {
+                position: absolute;
+                display: block;
+                width: 1px; 
+                height: 1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+            }
+
+            #nav {
+                border-bottom: 1px solid maroon;
+            }
+
+            #nav > ul::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            #nav > ul > li {
+                float: left;
+                width: 25%;
+            }
+
+            #nav > ul > li > a {
+                display: block;
+                text-align: center;
+                line-height: 2.4;
+                text-decoration: none;
+                color: black;
+
+                position: relative;
+            }
+
+            #nav > ul > li > a::before {
+                content: "";
+
+                position: absolute;
+                top: 8px;
+                bottom: 8px;
+                left: -1px;
+                width: 1px;
+                border-left: 1px solid maroon;
+            }
+
+            #sidebar {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                bottom: 0;
+                left: 50%;
+
+                background-color: rgba(0, 0, 0, 0.95);
+                padding: 2em 1em;
+            }
+
+            #sidebar > ul > li > a {
+                display: block;
+                padding: 0.4em 1em;
+                text-decoration: none;
+                color: white;
+            }
+
+            #content {
+                padding: 2em 1em;
+                border-bottom: 1px solid maroon;
+            }
+
+            #content h2 {
+                font-size: 1.6em;
+                font-weight: bold;
+                margin-bottom: 0.8em;
+            }
+
+            #content p {
+                padding: 10px;
+            }
+
+            #footer {
+                padding: 1em;
+                line-height: 1.5;
+            }
+
+            #footer strong {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="mobile">
+            <header id="header">
+                <h1>Mobile Web</h1>
+
+                <button type="button" id="toggle"><span>Toggle Menu</span></button>
+            </header>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">jQuery</a></li>
+                </ul>
+            </nav>
+
+            <aside id="sidebar">
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">jQuery</a></li>
+                </ul>
+            </aside>
+
+            <article id="content">
+                <h2>Section</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt euismod consequat. Vivamus id nibh vel nulla 
+                    condimentum ultricies. Nunc laoreet, felis id posuere ullamcorper, est tortor semper lorem, ut pharetra magna risus vitae lorem. 
+                    Praesent at commodo est. Aenean fringilla lacus malesuada venenatis tempus. Pellentesque ac mauris luctus, varius orci vitae, 
+                    porttitor urna. Suspendisse velit arcu, tincidunt a ante eu, efficitur maximus arcu. Donec ultrices tempus lacus, eu fermentum sem. 
+                    Etiam ultricies erat id diam efficitur scelerisque. Aliquam et volutpat risus. Phasellus nec suscipit justo. Duis porttitor velit libero, 
+                    quis feugiat lacus lobortis at. Phasellus ut ante a arcu ultricies rhoncus a sed arcu.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt euismod consequat. Vivamus id nibh vel nulla 
+                    condimentum ultricies. Nunc laoreet, felis id posuere ullamcorper, est tortor semper lorem, ut pharetra magna risus vitae lorem. 
+                    Praesent at commodo est. Aenean fringilla lacus malesuada venenatis tempus. Pellentesque ac mauris luctus, varius orci vitae, 
+                    porttitor urna. Suspendisse velit arcu, tincidunt a ante eu, efficitur maximus arcu. Donec ultrices tempus lacus, eu fermentum sem. 
+                    Etiam ultricies erat id diam .
+                    efficitur scelerisque. Aliquam et volutpat risus. Phasellus nec suscipit justo. Duis porttitor velit libero, 
+                    quis feugiat lacus lobortis at. Phasellus ut ante a arcu ultricies rhoncus a sed arcu.
+                </p>
+                
+            </article>
+
+            <footer id="footer">
+                <strong>Footer:</strong>
+                Lorem ipsum dolor sit amet, consectetur adiplscing elit.
+            </footer>
+        </div>
+    </body>
+</html>

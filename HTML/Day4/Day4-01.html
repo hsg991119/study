@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+
+    <body>
+        <h1>Input Form</h1>
+
+        <form accept="/server/program" method="POST">
+            <p>
+                <!-- TEXT: <input type="text" name="account"> -->
+                <!-- TEXT: <input type="text" name="account" value="pooter"> -->
+                <!-- TEXT: <input type="text" name="account" placeholder="Your account"> -->
+                <!-- TEXT: <input type="text" name="account" value="SAMPLE" disabled> -->
+                <!-- TEXT: <input type="text" name="account" value="SAMPLE" readonly> -->
+                TEXT: <input type="text" name="account" autocomplete="off">
+            </p>
+            <p>
+                PASSWORD: <input type="password" name="password">
+            </p>
+            <p>
+                RAIDO: <input type="radio" name="favorite" value="milk" id="milk">
+                       <label for="milk">우유</label>
+                       <input type="radio" name="favorite" value="cocoa"> 코코아
+                       <!-- <input type="radio" name="favorite" value="cola" checked> 콜라 -->
+                       <input type="radio" name="favorite" value="cola"> 콜라
+            </p>
+            <p>
+                CHECKBOX: 
+                <label>
+                    <input type="checkbox" name="agree" value="yes"> 동의합니까?
+                </label>
+            </p>
+            <p>
+                FILE: <input type="file" name="photo">
+            </p>
+            <p>
+                RESET: <input type="reset" name="reset" value="다 지워버려!">
+            </p>
+            <p>
+                SUBMIT: <input type="submit" name="login" value="LOGIN">
+            </p>
+            <p>
+                SELECT: <select name="tour">
+                    <opiton value="iceland">아이슬란드</opiton>
+                    <opiton value="swiss">스위스</opiton>
+                    <!-- <opiton value="amazon" selected>아마존</opiton> -->
+                    <opiton value="amazon">아마존</opiton>
+                </select>
+            </p>
+            <p>
+                TEXTAREA: <textarea name="comment" cols="30" rows="5"></textarea>
+            </p>
+
+            <p>
+                나는 &lt;Harray Potter&gt;를 좋아합니다!
+            </p>
+        </form>
+
+    </body>
+</html>

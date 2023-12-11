@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>css.selector demo</title>
+
+        <style>
+            .even > td { background-color: darkgray;}
+        </style>
+    </head>
+
+    <body>
+        <h1>천하대학교 웹학과 성적</h1>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>JavaScript</th>
+                    <th>jQuery</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="even">
+                    <td>김철수</td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>B</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>박영희</td>
+                    <td>B</td>
+                    <td>B</td>
+                    <td>A</td>
+                    <td>B</td>
+                </tr>
+
+                <tr class="even">
+                    <td>홍길동</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>C</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
